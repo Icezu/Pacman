@@ -4,7 +4,7 @@ import tkinter as tk
 
 class Dot(Sprite):
     def __init__(self, app, x, y, photo_image = None):
-        super().__init__(app, 'images/dot.png', x, y, photo_image = photo_image)
+        super().__init__(app, 'images/dot.gif', x, y, photo_image = photo_image)
 
         self.is_eaten = False
 
@@ -15,7 +15,7 @@ class Dot(Sprite):
 
 class Wall(Sprite):
     def __init__(self, app, x, y, photo_image = None):
-        super().__init__(app, 'images/wall.png', x, y, photo_image = photo_image)
+        super().__init__(app, 'images/wall.gif', x, y, photo_image = photo_image)
 
 
 class Maze:
@@ -56,8 +56,8 @@ class Maze:
     def init_maze_sprites(self):
         self.walls = []
         self.dots = {}
-        self.wall_image  = tk.PhotoImage(file='images/wall.png')
-        self.dot_image = tk.PhotoImage(file='images/dot.png')
+        self.wall_image  = tk.PhotoImage(file='images/wall.gif')
+        self.dot_image = tk.PhotoImage(file='images/dot.gif')
 
         self.init_active_dots()
 
